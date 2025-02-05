@@ -29,29 +29,42 @@ python ConvertXML.py
 ```
 
 ## Example
-### Input (`Files/sample.xml`)
+### Input (`Files/example.xml`)
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
+    <title>My WordPress Blog</title>
     <item>
-      <title>Sample Post</title>
-      <link>https://example.com/sample-post</link>
+      <title>First Post</title>
+      <link>https://example.com/first-post</link>
       <pubDate>Tue, 05 Feb 2025 12:00:00 +0000</pubDate>
-      <content:encoded><![CDATA[<p>Sample post content.</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>This is the first post content.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Second Post</title>
+      <link>https://example.com/second-post</link>
+      <pubDate>Wed, 06 Feb 2025 15:30:00 +0000</pubDate>
+      <content:encoded><![CDATA[<p>This is the second post content.</p>]]></content:encoded>
     </item>
   </channel>
 </rss>
 ```
 
-### Output (`Convert/sample.json`)
+### Output (`Convert/example.json`)
 ```json
 [
   {
-    "title": "Sample Post",
-    "link": "https://example.com/sample-post",
+    "title": "First Post",
+    "link": "https://example.com/first-post",
     "pubDate": "Tue, 05 Feb 2025 12:00:00 +0000",
-    "content:encoded": "<p>Sample post content.</p>"
+    "content:encoded": "<p>This is the first post content.</p>"
+  },
+  {
+    "title": "Second Post",
+    "link": "https://example.com/second-post",
+    "pubDate": "Wed, 06 Feb 2025 15:30:00 +0000",
+    "content:encoded": "<p>This is the second post content.</p>"
   }
 ]
 ```
